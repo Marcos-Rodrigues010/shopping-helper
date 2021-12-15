@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping Helper</title>
+</head>
+<body onload="document.querySelector('#name').focus()">
+    <div class="container">
+        <div class="modal">
+            <div class="modal-content">
+                <span>Deseja realmente excluir este item do carrinho?</span>
+                <div class="modal-buttons">
+                    <button id="btn-yes" onclick="deleteItem()">Sim</button>
+                    <button id="btn-no" onclick="closeModal()">Não</button>
+                </div>
+            </div>
+        </div>
+        <h1>Shopping Helper</h1>
+        <div class="addItem-area">
+            <input class="addItem-area--input" type="text" name="name" id="name" placeholder="Adicione um item...">
+            <input class="addItem-area--input" type="number" name="qtd" id="qtd" min="1" placeholder="Quantidade...">
+            <input class="addItem-area--input" type="number" name="unit-value" id="unit-value" min="0.01" step="0.01" placeholder="valor unitário...">
+            <button class="btnAddItem addItem-area--input" onclick="checkFields()">Adicionar item</button>
+        </div>
+        <div class="listItem-area">
+            <div class="title-list">
+                <div>nº</div>
+                <div>Nome</div>
+                <div>Qtd</div>
+                <div id="title-list-unit-value">Val. Unit.</div>
+                <div id="title-list-total-value">Val. Total</div>
+                <div>Excluir</div>
+            </div>
+        </div>
+        <div class="total-value">
+            Valor total: R$0,00
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>

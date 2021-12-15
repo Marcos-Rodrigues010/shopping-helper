@@ -1,0 +1,263 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family:'Montserrat', sans-serif;
+    margin:0;
+    padding:0;
+}
+.container{
+    margin:auto;
+    max-width:1440px;
+    min-width:320px;
+    padding:70px 20px;
+    min-height:100vh;
+    background-color:#00010F;
+    color:#EEE;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+h1{
+    font-size:40px;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.addItem-area{
+    padding:20px;
+    margin-top:30px;
+    border:1px solid #EEE;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+}
+
+.addItem-area--input{
+    border:0;
+    outline:0;
+    border-radius:5px;
+    padding:10px;
+}
+
+#name{
+    width:200px;
+}
+
+#qtd, #unit-value{
+    width:130px;
+    margin-left:10px;
+}
+
+.btnAddItem{
+    margin-left:10px;
+    font-weight:bold;
+}
+
+.btnAddItem:hover{
+    background-color:#E6B800;
+    color:#493407;
+}
+
+.listItem-area{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.title-list{
+    margin-bottom:20px;
+    background-color:#CCC;
+    color:#00010F;
+}
+
+.title-list > div {
+    flex:1;
+    border-right:1px solid #00010F;
+    padding:5px 20px;
+}
+
+.item{
+    border:1px solid #CCC;
+    margin-bottom:10px;
+}
+
+.item, .title-list{
+    width:700px;
+    display:flex;
+    align-items: center;
+    border-radius:5px;
+    padding:10px 0;
+    text-align:center;
+}
+
+.item > div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex:1;
+    border-right:1px solid #CCC;
+    padding:5px 20px;
+    height:45px;
+}
+
+.item input{
+    width:100%;
+    border:0;
+    outline:0;
+    border-radius:5px;
+    padding:10px;
+}
+
+.item :last-child, .title-list :last-child{
+    border:0;
+}
+
+.item svg{
+    width:30px;
+    height:30px;
+    fill:#CCC;
+}
+
+.total-value{
+    width:700px;
+    color:#CCC;
+    border:1px solid #CCC;
+    border-radius:5px;
+    padding:20px 0;
+    text-align:center;
+}
+
+.modal{
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:999;
+    background-color:rgba(0, 0, 0, 0.8);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    padding:80px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color:#FFF;
+    border-radius: 10px;
+    color:#00010F;
+}
+
+.modal-content span{
+    font-weight:bold;
+    margin-bottom:50px;
+    text-align:center;
+}
+
+.modal-buttons button{
+    text-align:center;
+    width:100px;
+    padding:10px;
+    border:0;
+    border-radius: 5px;
+}
+
+#btn-yes{
+    background-color:#00010F;
+    color:#CCC;
+    margin-right: 30px;
+}
+
+#btn-yes:hover{
+    background-color: #000033;
+}
+
+#btn-no{
+    background-color: #AAA;
+    color:#00010F;
+}
+
+#btn-no:hover{
+    background-color: #949494;
+}
+
+@media (max-width:720px){
+
+    .container{
+        font-size:14px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .addItem-area{
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .addItem-area input{
+        margin-bottom: 20px;
+    }
+
+    #qtd, #unit-value, .btnAddItem{
+        margin-left:0;
+        width:100%;
+    }
+
+    .listItem-area{
+        width:100%;
+        max-width:480px;;
+    }
+
+    .title-list{
+        width:100%;
+    }
+
+    .title-list > div {
+        width:100%;
+        height:46px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:5px;
+    }
+
+    #title-list-unit-value, #title-list-total-value{
+        line-height: normal;
+    }
+
+    .item{
+        width:100%;
+    }
+
+    .item > div {
+        padding:2px;
+        height:35px;display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item input{
+        padding:5px;
+    }
+
+    .item svg{
+        width: 26px;
+        height: 26px;
+    }
+
+    .total-value{
+        width:100%;
+        max-width:480px;
+    }
+
+
+    .modal-content{
+        width:90%;
+        padding:20px;
+    }
+}
